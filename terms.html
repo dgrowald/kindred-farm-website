@@ -91,7 +91,7 @@
         <p>If you have opted in to receive messages from us via WhatsApp or other messaging platforms, you may opt out at any time by:</p>
         <ul>
           <li>Replying "STOP" to any message we send you</li>
-          <li>Contacting us at <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a></li>
+          <li>Contacting us at <a class="obfuscated-email" href="#">[email]</a></li>
         </ul>
         <p>We will honor opt-out requests promptly. Please note that opting out of marketing messages does not opt you out of receiving transactional or service-related communications.</p>
 
@@ -208,7 +208,7 @@
         <p>If you have any questions about these Terms of Use, please contact us at:</p>
         <p>
           <strong>Kindred Farm LLC</strong><br>
-          Email: <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a>
+          Email: <a class="obfuscated-email" href="#">[email]</a>
         </p>
       </div>
     </div>
@@ -220,5 +220,17 @@
       <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
     </div>
   </footer>
+  <script>
+    (function() {
+      var u = 'contact';
+      var d = 'kindredfarm.org';
+      var e = u + '@' + d;
+      var links = document.querySelectorAll('.obfuscated-email');
+      links.forEach(function(link) {
+        link.href = 'mailto:' + e;
+        link.textContent = e;
+      });
+    })();
+  </script>
 </body>
 </html>

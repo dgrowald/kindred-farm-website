@@ -32,7 +32,7 @@
         <p>Kindred Farm LLC is a land stewardship and rewilding initiative based in the United States. For the purposes of data protection laws, including the General Data Protection Regulation (GDPR), we are the data controller responsible for your personal data.</p>
         <p><strong>Contact Information:</strong></p>
         <ul>
-          <li>Email: <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a></li>
+          <li>Email: <a class="obfuscated-email" href="#">[email]</a></li>
         </ul>
       </div>
 
@@ -131,7 +131,7 @@
 
         <h3>8.1 Rights for All Users</h3>
         <ul>
-          <li><strong>Opt-Out of Communications:</strong> You may opt out of receiving messages from us at any time by replying "STOP" to any WhatsApp message or by contacting us at <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a>.</li>
+          <li><strong>Opt-Out of Communications:</strong> You may opt out of receiving messages from us at any time by replying "STOP" to any WhatsApp message or by contacting us at <a class="obfuscated-email" href="#">[email]</a>.</li>
           <li><strong>Access:</strong> You may request information about the personal data we hold about you.</li>
           <li><strong>Correction:</strong> You may request that we correct any inaccurate personal data.</li>
           <li><strong>Deletion:</strong> You may request that we delete your personal data.</li>
@@ -149,7 +149,7 @@
           <li><strong>Right to Withdraw Consent:</strong> Where we rely on consent for processing, you have the right to withdraw that consent at any time.</li>
           <li><strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with a supervisory authority if you believe our processing of your personal data violates applicable law.</li>
         </ul>
-        <p>To exercise any of these rights, please contact us at <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a>. We will respond to your request within 30 days.</p>
+        <p>To exercise any of these rights, please contact us at <a class="obfuscated-email" href="#">[email]</a>. We will respond to your request within 30 days.</p>
       </div>
 
       <div class="section">
@@ -161,7 +161,7 @@
           <li>The right to opt-out of the sale or sharing of your personal information</li>
           <li>The right to non-discrimination for exercising your privacy rights</li>
         </ul>
-        <p>We do not sell your personal information. To exercise your California privacy rights, please contact us at <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a>.</p>
+        <p>We do not sell your personal information. To exercise your California privacy rights, please contact us at <a class="obfuscated-email" href="#">[email]</a>.</p>
       </div>
 
       <div class="section">
@@ -187,7 +187,7 @@
 
       <div class="section">
         <h2>12. Children's Privacy</h2>
-        <p>Our Site and services are not directed to children under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that we have collected personal information from a child under 16, we will take steps to delete such information promptly. If you believe we may have collected information from a child under 16, please contact us at <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a>.</p>
+        <p>Our Site and services are not directed to children under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that we have collected personal information from a child under 16, we will take steps to delete such information promptly. If you believe we may have collected information from a child under 16, please contact us at <a class="obfuscated-email" href="#">[email]</a>.</p>
       </div>
 
       <div class="section">
@@ -205,7 +205,7 @@
         <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
         <p>
           <strong>Kindred Farm LLC</strong><br>
-          Email: <a href="mailto:contact@kindredfarm.org">contact@kindredfarm.org</a>
+          Email: <a class="obfuscated-email" href="#">[email]</a>
         </p>
         <p>We will respond to your inquiry as soon as reasonably possible and in accordance with applicable law.</p>
       </div>
@@ -218,5 +218,17 @@
       <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
     </div>
   </footer>
+  <script>
+    (function() {
+      var u = 'contact';
+      var d = 'kindredfarm.org';
+      var e = u + '@' + d;
+      var links = document.querySelectorAll('.obfuscated-email');
+      links.forEach(function(link) {
+        link.href = 'mailto:' + e;
+        link.textContent = e;
+      });
+    })();
+  </script>
 </body>
 </html>
