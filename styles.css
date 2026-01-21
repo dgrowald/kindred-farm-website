@@ -90,6 +90,71 @@ main {
   padding: 3rem 0;
 }
 
+/* Hero Section (Home page) */
+main.hero {
+  position: relative;
+  background-image: url('peter-james-eisenhaure-PbWJY0M5hRM-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 4rem 0;
+}
+
+main.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(245, 242, 237, 0.85);
+}
+
+main.hero .container {
+  position: relative;
+  text-align: center;
+}
+
+main.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+main.hero .tagline {
+  font-size: 1.25rem;
+  color: var(--color-sage);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+main.hero .intro {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+main.hero .status {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: 2.5rem;
+}
+
+main.hero .cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-earth);
+  color: var(--color-cream);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease;
+}
+
+main.hero .cta:hover {
+  background-color: var(--color-sage);
+  color: var(--color-cream);
+}
+
 h1 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
