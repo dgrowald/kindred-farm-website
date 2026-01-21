@@ -3,7 +3,23 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(gh auth status:*)",
+      "Skill(superpowers:brainstorming)",
+      "Skill(superpowers:brainstorming:*)",
+      "Bash(gh api:*)",
+      "Bash(gh auth login:*)",
+      "Bash(gh repo create:*)",
+      "Bash(netlify status:*)",
+      "Bash(netlify init:*)",
+      "Bash(netlify sites:create:*)",
+      "Bash(netlify deploy:*)",
+      "Bash(netlify domains:add:*)",
+      "Bash(netlify help:*)",
+      "Bash(netlify api:*)",
+      "Bash(netlify link --help:*)",
+      "Bash(git push)"
     ]
   }
 }
