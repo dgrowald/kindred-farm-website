@@ -43,45 +43,47 @@ body {
 
 /* Header */
 header {
-  background-color: var(--color-parchment);
-  border-bottom: 1px solid var(--color-stone);
-  padding: 1.5rem 0;
-}
-
-.site-title {
-  font-family: var(--font-heading);
-  font-size: 1.75rem;
-  font-weight: normal;
-  color: var(--color-earth);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-}
-
-.site-title:hover {
-  color: var(--color-sage);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 0;
 }
 
 nav {
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 nav a {
   color: var(--color-text-light);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-bottom: 0.25rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 1px solid transparent;
 }
 
 nav a:hover,
 nav a.active {
   color: var(--color-earth);
   border-bottom: 1px solid var(--color-earth);
+}
+
+/* Static header for inner pages */
+header.static {
+  position: relative;
+  background-color: var(--color-parchment);
+  border-bottom: 1px solid var(--color-stone);
 }
 
 /* Main Content */
@@ -99,54 +101,60 @@ main.hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
-  padding: 4rem 0;
+  min-height: 100vh;
+  padding: 6rem 1.5rem 4rem;
 }
 
 main.hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(245, 242, 237, 0.85);
+  background-color: rgba(245, 242, 237, 0.82);
 }
 
 main.hero .container {
   position: relative;
   text-align: center;
+  max-width: 540px;
 }
 
 main.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.75rem;
+  font-weight: normal;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 main.hero .tagline {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--color-sage);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-style: italic;
+  letter-spacing: 0.01em;
 }
 
 main.hero .intro {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--color-text);
   margin-bottom: 0.5rem;
+  line-height: 1.8;
 }
 
 main.hero .status {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-text-light);
   margin-bottom: 2.5rem;
 }
 
 main.hero .cta {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 2rem;
   background-color: var(--color-earth);
   color: var(--color-cream);
   text-decoration: none;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition: background-color 0.2s ease;
 }
 
@@ -229,6 +237,22 @@ footer a:hover {
   color: var(--color-earth);
 }
 
+/* Minimal footer for hero pages */
+footer.minimal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  padding: 1.5rem;
+}
+
+footer.minimal p {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
 /* Contact page specific */
 .contact-info {
   background-color: var(--color-parchment);
@@ -259,19 +283,46 @@ footer a:hover {
   }
 
   header {
-    padding: 1.25rem 0;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
+    padding: 1rem 0;
   }
 
   nav ul {
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
   }
 
   main {
     padding: 2rem 0;
+  }
+
+  main.hero {
+    padding: 5rem 1.25rem 3rem;
+  }
+
+  main.hero h1 {
+    font-size: 2rem;
+  }
+
+  main.hero .tagline {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  main.hero .intro {
+    font-size: 0.95rem;
+  }
+
+  main.hero .status {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  main.hero .cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
   }
 
   h1 {
@@ -280,5 +331,13 @@ footer a:hover {
 
   h2 {
     font-size: 1.1rem;
+  }
+
+  footer {
+    padding: 1.25rem 0;
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }
